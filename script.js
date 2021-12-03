@@ -8,4 +8,8 @@ var getMeal = async () => {
     console.log(data)
 }
 
+    localStorage.setItem("data.drinks");
+    localStorage.setItem();
+
+    console.log(localStorage) 
 getMeal()
