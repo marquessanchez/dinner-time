@@ -23,13 +23,11 @@ var pickMeal = async () => {
     
 }
 
-<<<<<<< HEAD
     localStorage.setItem("data.drinks");
     localStorage.setItem();
 
     console.log(localStorage) 
 getMeal()
-=======
 
 //get drink name and thumbnail
 var pickDrink = async () => {
@@ -45,4 +43,3 @@ var pickDrink = async () => {
 
 pickDrink()
 pickMeal()
->>>>>>> f887444408c8a3765868dcfa4025d186bd664b20
