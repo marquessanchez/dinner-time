@@ -22,14 +22,15 @@ var pickMeal = async () => {
 
     
 }
+//storage 
+localStorage.setItem("data.meals" , "strMeal");
+localStorage.setItem("data.drinks" , "strDrink");
 
-<<<<<<< HEAD
-    localStorage.setItem("data.drinks");
-    localStorage.setItem();
+//retrieve
+document.getElementById("result").innerHTML =
 
-    console.log(localStorage) 
+console.log(localStorage) 
 getMeal()
-=======
 
 //get drink name and thumbnail
 var pickDrink = async () => {
@@ -45,4 +46,3 @@ var pickDrink = async () => {
 
 pickDrink()
 pickMeal()
->>>>>>> f887444408c8a3765868dcfa4025d186bd664b20
