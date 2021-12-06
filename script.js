@@ -35,10 +35,12 @@ var pickDrink = async () => {
     drinkImgEl.src = drinkThumb
 }
 
+getDinnerBtn.addEventListener('click', pickMeal);
+
 localStorage.setItem("data.drinks");
     localStorage.setItem();
 
     console.log(localStorage) 
 
 
-getDinnerBtn.addEventListener('button', pickMeal);
+
