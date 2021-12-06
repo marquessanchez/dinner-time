@@ -1,13 +1,15 @@
 const mealDBEndpoint = "https://www.themealdb.com/api/json/v1/1/random.php"
 const cocktailDBEndpoint = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-const meal = Document.getElementById("meal")
-const drink = Document.getElementById("drink")
+var mealNameEl = document.querySelector('#meal-name')
+var drinkNameEl = document.querySelector('#drink-name')
+var mealImgEl = document.querySelector('#meal-img')
+var drinkImgEl = document.querySelector('#drink-img')
+var getDinnerBtn = document.querySelector('#dinner-btn')
 
 var mealName = ""
 var mealThumb = ""
 var drinkName = ""
 var drinkThumb = ""
-
 
 //get meal name and thumbnail
 var pickMeal = async () => {
@@ -16,18 +18,11 @@ var pickMeal = async () => {
     mealName = data.meals[0].strMeal
     mealThumb = data.meals[0].strMealThumb
 
-    console.log(data)
-    console.log(data.meals[0].strMeal)
-    console.log(data.meals[0].strMealThumb)
+    mealNameEl.textContent = mealName
+    mealImgEl.src = mealThumb
 
-    
+    pickDrink()
 }
-
-    localStorage.setItem("data.drinks");
-    localStorage.setItem();
-
-    console.log(localStorage) 
-getMeal()
 
 //get drink name and thumbnail
 var pickDrink = async () => {
@@ -35,11 +30,15 @@ var pickDrink = async () => {
     let data = await res.json()
     drinkName = data.drinks[0].strDrink
     drinkThumb = data.drinks[0].strDrinkThumb
-    console.log(data)
-    console.log(data.drinks[0].strDrink)
-    console.log(data.drinks[0].strDrinkThumb)
+    
+    drinkNameEl.textContent = drinkName
+    drinkImgEl.src = drinkThumb
 }
 
+localStorage.setItem("data.drinks");
+    localStorage.setItem();
 
-pickDrink()
-pickMeal()
+    console.log(localStorage) 
+
+
+getDinnerBtn.addEventListener('button', pickMeal);
