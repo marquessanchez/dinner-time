@@ -50,7 +50,6 @@ var saveMeal = function () {
     meals.push(mealNameEl.textContent)
     favMeal.appendChild(li)
     li.innerHTML = mealNameEl.textContent
-
     localStorage.setItem('meals', JSON.stringify(meals))
 }
 
@@ -82,12 +81,8 @@ const setFavorites = function () {
 document.addEventListener("DOMContentLoaded", function(event) { 
     console.log(localStorage)
     setFavorites() 
-   
 });
 
 getDinnerBtn.addEventListener('click', getDinner);
 favMealBtn.addEventListener('click', saveMeal);
 favDrinkBtn.addEventListener('click', saveDrink);
-
-
-
