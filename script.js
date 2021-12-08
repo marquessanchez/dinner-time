@@ -20,8 +20,6 @@ var pickMeal = async () => {
 
     mealNameEl.textContent = mealName
     mealImgEl.src = mealThumb
-
-    pickDrink()
 }
 
 //get drink name and thumbnail
@@ -35,7 +33,12 @@ var pickDrink = async () => {
     drinkImgEl.src = drinkThumb
 }
 
-getDinnerBtn.addEventListener('click', pickMeal);
+var getDinner = async () => {
+    pickMeal()
+    pickDrink()
+}
+
+getDinnerBtn.addEventListener('click', getDinner);
 
 localStorage.setItem("data.drinks");
     localStorage.setItem();
