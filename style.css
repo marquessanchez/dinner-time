@@ -54,9 +54,13 @@ h2 {
 .card {
     margin: 10px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
-}
+    padding: 5px;
 }
 
 .card img {
     padding: 10px;
+}
+
+.hide {
+    display: none;
 }
