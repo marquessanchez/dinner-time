@@ -5,6 +5,7 @@ var drinkNameEl = document.querySelector('#drink-name')
 var mealImgEl = document.querySelector('#meal-img')
 var drinkImgEl = document.querySelector('#drink-img')
 var getDinnerBtn = document.querySelector('#dinner-btn')
+var dinnerCont = document.querySelector('#dinner')
 
 var mealName = ""
 var mealThumb = ""
@@ -17,7 +18,7 @@ var pickMeal = async () => {
     let data = await res.json()
     mealName = data.meals[0].strMeal
     mealThumb = data.meals[0].strMealThumb
-
+    dinnerCont.classList.remove("hide")
     mealNameEl.textContent = mealName
     mealImgEl.src = mealThumb
 }
