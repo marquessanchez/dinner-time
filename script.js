@@ -27,6 +27,15 @@ var pickMeal = async () => {
     mealNameEl.textContent = mealName
     mealImgEl.src = mealThumb
 }
+//storage 
+localStorage.setItem("mealName", meal);
+localStorage.setItem("");
+
+let meals=JSON.parse(localStorage.getItem("data.meals"));
+let drinks=JSON.parse(localStorage.getItem("data.drinks"));
+
+console.log(localStorage) 
+getMeal()
 
 //get drink name and thumbnail
 var pickDrink = async () => {
