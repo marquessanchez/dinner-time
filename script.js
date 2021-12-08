@@ -6,11 +6,16 @@ var mealImgEl = document.querySelector('#meal-img')
 var drinkImgEl = document.querySelector('#drink-img')
 var getDinnerBtn = document.querySelector('#dinner-btn')
 var dinnerCont = document.querySelector('#dinner')
-
+var favMeal = document.querySelector('#favorite-meals')
+var favDrink = document.querySelector('#favorite-drinks')
+var favMealBtn = document.querySelector('#favorite-meal-button')
+var favDrinkBtn = document.querySelector('#favorite-drink-button')
 var mealName = ""
 var mealThumb = ""
 var drinkName = ""
 var drinkThumb = ""
+var meals = []
+var drinks = []
 
 //get meal name and thumbnail
 var pickMeal = async () => {
@@ -18,7 +23,7 @@ var pickMeal = async () => {
     let data = await res.json()
     mealName = data.meals[0].strMeal
     mealThumb = data.meals[0].strMealThumb
-    dinnerCont.classList.remove("hide")
+
     mealNameEl.textContent = mealName
     mealImgEl.src = mealThumb
 }
@@ -37,14 +42,52 @@ var pickDrink = async () => {
 var getDinner = async () => {
     pickMeal()
     pickDrink()
+    dinnerCont.classList.remove("hide")
 }
 
+var saveMeal = function () {
+    var li = document.createElement('li')
+    meals.push(mealNameEl.textContent)
+    favMeal.appendChild(li)
+    li.innerHTML = mealNameEl.textContent
+
+    localStorage.setItem('meals', JSON.stringify(meals))
+}
+
+var saveDrink = function () {
+    var li = document.createElement('li')
+    drinks.push(drinkNameEl.textContent)
+    favDrink.appendChild(li)
+    li.innerHTML = drinkNameEl.textContent
+    localStorage.setItem('drinks', JSON.stringify(drinks))
+}
+
+const setFavorites = function () {
+    var meals = JSON.parse(localStorage.getItem('meals'))
+    var drinks = JSON.parse(localStorage.getItem('drinks'))
+
+    meals.forEach(function(meal) {
+        var liMeal = document.createElement('li')
+        liMeal.innerHTML = meal
+        favMeal.appendChild(liMeal)
+    })
+
+    drinks.forEach(function(drink) {
+        var liDrink = document.createElement('li')
+        liDrink.innerHTML = drink
+        favDrink.appendChild(liDrink)
+    })
+}
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    console.log(localStorage)
+    setFavorites() 
+   
+});
+
 getDinnerBtn.addEventListener('click', getDinner);
-
-localStorage.setItem("data.drinks");
-    localStorage.setItem();
-
-    console.log(localStorage) 
+favMealBtn.addEventListener('click', saveMeal);
+favDrinkBtn.addEventListener('click', saveDrink);
 
 
 
