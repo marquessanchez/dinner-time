@@ -11,34 +11,35 @@
 <body>
     <!-- navigation -->
     <header>
-        <h1>
-            <a href="/">Dinner Time</a>
-        </h1>
-    <nav>
+        <nav>
+            
         <!-- Unordered list element-->
         <ul>
+            <a class="title" href="#"><img src="img/logo.png"/></a>
             <!-- List item element-->
             <li>
             <!-- Anchor element-->
-                <a href="#dinner">Get Dinner</a>
+                <a class="title" href="#dinner">Get Dinner</a>
             </li>
             <li>
-                <a href= "#fav-meal">Favorite Meal</a>
+                <a class="title" href= "#fav-meal">Favorite Meal</a>
             </li>
             <li>
-                <a href= "#fav-drink">Favorite Drink</a>
+                <a class="title" href= "#fav-drink">Favorite Drink</a>
             </li>
         </ul>
     </nav>
     </header>
+    <div class="main">
     <h1>
       What are you in the mood for?
   </h1>
   <p>
     Let's find a dinner for you tonight! Click Find Meal down below.
   </p>
+</div>
     <h2 class="col-12">What do you want for dinner?</h2>
-    <div class="container text-center justify-content-center dinner">
+    <div class="container text-center justify-content-center dinner" id="dinner">
         <div class="col-5 card" id="meal"> 
             <h2>Meal</h2>
             <img id="meal-img"/>
@@ -50,6 +51,15 @@
             <h3 id="drink-name"></h3>
         </div>
         <button type="button" class="col-2 btn btn-primary" id="dinner-btn">Get Dinner</button>
+    </div>
+
+    <div id="favorite-meal">
+        <h2>Favorite Meal</h2>
+        <ul id="favorite-meals"></ul>
+    </div>
+    <div id="favorite-drink">
+        <h2>Favorite Drink</h2>
+        <ul id="favorite-drinks"></ul>
     </div>
 <script type="text/javascript" src="script.js"></script>
 </body>
