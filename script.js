@@ -24,8 +24,8 @@ var pickMeal = async () => {
     pickDrink()
 }
 //storage 
-localStorage.setItem("data.meals" , "strMeal");
-localStorage.setItem("data.drinks" , "strDrink");
+localStorage.setItem("mealName", meal);
+localStorage.setItem("");
 
 let meals=JSON.parse(localStorage.getItem("data.meals"));
 let drinks=JSON.parse(localStorage.getItem("data.drinks"));
