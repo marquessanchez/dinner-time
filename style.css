@@ -16,6 +16,9 @@ body {
     100%{ background-position: 0 50%;
     }
 }
+main {
+    
+}
 .title {
     color: mintcream;
 }
@@ -40,6 +43,7 @@ h1 {
 }
 h2 {
     text-align: center;
+    color: mintcream;
 }
 .main {
     color: mintcream;
