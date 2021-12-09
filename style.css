@@ -1,5 +1,5 @@
 .header {
-    color: mintcream
+    color: mintcream;
 }
 body {
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
@@ -22,8 +22,6 @@ body {
 img {
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
-
-
 nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -32,8 +30,7 @@ nav ul {
     list-style: none;
     padding: 12px;
     border-bottom: solid 2px ;
-
-
+    font-size: 30px;
 }
 h1 {
     color: mintcream;
@@ -45,18 +42,14 @@ h2 {
     color: mintcream;
     text-align: center;
 }
-
 .container {
     display: flex;
     flex-wrap: wrap;
 }
-
 .card {
     margin: 10px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
-}
-
 .card img {
     padding: 10px;
 }
