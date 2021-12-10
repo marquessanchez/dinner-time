@@ -17,3 +17,8 @@ With many Americans dealing with a busy schedule, they sometimes find a hard tim
 * Sean Gillespie
 * Shakurah Brack
 * Marques Sanchez
+
+## Screenshots
+![screenshot 1](/img/dinner-time-screenshot1.PNG)
+
+![screenshot 2](/img/dinner-time-screenshot2.PNG)
