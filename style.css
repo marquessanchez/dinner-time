@@ -16,9 +16,11 @@ body {
     100%{ background-position: 0 50%;
     }
 }
-main {
-    
+
+ul {
+    list-style-type: none;
 }
+
 .title {
     color: mintcream;
 }
@@ -42,7 +44,7 @@ h2 {
     text-align: center;
     color: mintcream;
 }
-.main {
+main {
     color: mintcream;
     text-align: center;
 }
@@ -53,15 +55,16 @@ h2 {
 .card {
     margin: 10px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
-<<<<<<< HEAD
-}
-=======
     padding: 5px;
+    color: black;
 }
 
->>>>>>> 4ae4d1a9245f4d28ad11991021db155d7be537d2
+.card h2 {
+    color: black;
+}
+
 .card img {
-    padding: 10px;
+    padding: 11px;
 }
 
 .hide {

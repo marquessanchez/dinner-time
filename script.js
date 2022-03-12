@@ -62,8 +62,7 @@ var saveDrink = function () {
 }
 
 const setFavorites = function () {
-    var meals = JSON.parse(localStorage.getItem('meals'))
-    var drinks = JSON.parse(localStorage.getItem('drinks'))
+    
 
     meals.forEach(function(meal) {
         var liMeal = document.createElement('li')
@@ -79,6 +78,17 @@ const setFavorites = function () {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
+    meals = JSON.parse(localStorage.getItem('meals'))
+    drinks = JSON.parse(localStorage.getItem('drinks'))
+
+    if (!meals) {
+        meals = []
+    }
+
+    if (!drinks) {
+        drinks = []
+    }
+
     console.log(localStorage)
     setFavorites() 
 });
