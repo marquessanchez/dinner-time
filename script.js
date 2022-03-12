@@ -17,7 +17,7 @@ var drinkThumb = ""
 var meals = []
 var drinks = []
 
-//get meal name and thumbnail
+// get meal name and thumbnail
 var pickMeal = async () => {
     const res = await fetch(mealDBEndpoint)
     let data = await res.json()
@@ -28,7 +28,7 @@ var pickMeal = async () => {
     mealImgEl.src = mealThumb
 }
 
-//get drink name and thumbnail
+// get drink name and thumbnail
 var pickDrink = async () => {
     const res = await fetch(cocktailDBEndpoint)
     let data = await res.json()
